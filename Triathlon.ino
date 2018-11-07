@@ -82,30 +82,8 @@ void setup() {
       Serial.print(arrayOfSeconds[index] % seconds_in_minute) ;
       Serial.println(" sec ")   ;
 
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
   }
-
-
 }
 
 void loop() {
