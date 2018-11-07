@@ -1,13 +1,11 @@
-
-//The program asks a user for a time of each part of triathlon. 
+//The program asks a user for a time of each part of triathlon.
 //If the inserted time is the quickest than it is being stored as the best score.
-//The best score is being shown when the user inputs negative value as the first 
+//The best score is being shown when the user inputs negative value as the first
 
-
-int read_from_serial(String text) //creating a function that will read input value from serial port
+int read_from_serial(String text)
 {
   int input_val;
-  Serial.println(text); 
+  Serial.println(text);
   while (!Serial.available()) {
     ;
   }
@@ -31,7 +29,7 @@ void setup() {
 
     arrayOfSeconds[0] = read_from_serial("Swimming Hours: ");
 
-    if (arrayOfSeconds[0] < 0) { //if user inputs a hour number that is less than zero program will output a current best score 
+    if (arrayOfSeconds[0] < 0) { //if user inputs a hour number that is less than zero program will output a current best score
       Serial.println("==========");
       Serial.print("The fastest athlete was no. ");
       Serial.print(number_of_the_best_person);
@@ -63,7 +61,7 @@ void setup() {
 
     arrayOfSeconds[3] = arrayOfSeconds[1] + arrayOfSeconds[2] + arrayOfSeconds[0];
 
-    counter++; 
+    counter++;
 
 
     //if inserted score is better than the best score than it is now the best score
